@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model bool[,]
+
+<div id="game-board">
+    @await Html.PartialAsync("_GameBoard", Model)
+</div>
+
+@section scripts {
+    <script src="~/js/site.js"></script>
+}

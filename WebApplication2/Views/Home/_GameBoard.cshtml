@@ -1,0 +1,13 @@
+@model bool[,]
+
+<table>
+    @for (int row = 0; row < Model.GetLength(0); row++)
+    {
+        <tr>
+            @for (int col = 0; col < Model.GetLength(1); col++)
+            {
+                <td class="cell @(Model[row, col] ? "alive" : "dead")"></td>
+            }
+        </tr>
+    }
+</table>
